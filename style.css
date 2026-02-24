@@ -6,6 +6,7 @@
     --text-dark: #15191D;
     --text-light: #737373;
     --extra-light: #e5e5e5;
+    --white: #ffffff;
     --max-width: 1200px;
     --header-font: "Syncopate", sans-serif;
 }
@@ -36,7 +37,7 @@
     outline: none;
     border: none;
     font-size: 1rem;
-    color: white;
+    color: var(--white);
     background-color: var(--text-dark);
     border-radius: 10px;
     transition :0.3s;
@@ -67,3 +68,40 @@ html,
 body {
     scroll-behavior: smooth;
 }
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+header{
+    position: relative;
+    background-image: url("images/background image.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+nav{
+    position: fixed; 
+    isolation: isolate;
+    width: 100%;
+    z-index:  9;
+}
+
+.navheader{
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+}
+
+.navlogo{
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--header-font);
+    color: var(--white);
+    letter-spacing: -2px;
+}
+
+.navmenu_btn{}
