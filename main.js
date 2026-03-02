@@ -10,4 +10,9 @@ menuBtn.addEventListener("click", (e) => {
 });
 
 
+ navLinks.addEventListener("click" , (e) => {
+  navLinks.classList.remove("open")
+  menuBtnIcon.setAttribute("class", "ri-menu-line");
+ });
+
  
