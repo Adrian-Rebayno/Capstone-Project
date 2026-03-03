@@ -46,7 +46,7 @@
 
 .btn:hover {
   color: var(--text-dark);
-  background-color: var(--primary-color);
+  background-color: var(--extra-light);
 }
 
 img {
@@ -70,6 +70,7 @@ body {
 
 body {
   font-family: "Poppins", sans-serif;
+
 }
 
 header {
@@ -155,7 +156,7 @@ nav {
     gap: 2rem;
   }
 
-  .nav__header{
+  .nav__header {
     flex: 1;
     padding: 0;
     background-color: transparent;
@@ -165,11 +166,11 @@ nav {
     color: var(--text-dark);
   }
 
-  .nav__menu__btn{
+  .nav__menu__btn {
     display: none;
   }
 
-  .nav__links{
+  .nav__links {
     position: static;
     padding: 0;
     width: fit-content;
@@ -182,19 +183,80 @@ nav {
     color: var(--text-dark);
   }
 
-  .nav__links a:hover{
+  .nav__links a:hover {
     color: var(--primary-color);
   }
 
-  .nav__btn{
+  .nav__btn {
     display: flex;
     flex: 1;
     align-items: center;
     justify-content: flex-end;
   }
 
-  .nav__btn .btn{
-    color: var(--text-dark);
+  .nav__btn .btn {
+    color: var(--white);
     background-color: var(--primary-color);
+  }
+}
+
+.wrapper {
+  position: absolute;
+  top: 20%;
+  color: var(--primary-color);
+  padding: 2rem;
+}
+.wrapper .content{
+  font: lighter 3rem;
+}
+
+.wrapper .content ol{
+  list-style: none;
+  --height: 3.8rem;
+  height: var(--height);
+  line-height: var(--height);
+  overflow: hidden;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+
+
+.wrapper .content ol li {
+  animation: slide calc(5*2*2) steps(3) infinite; 
+}
+
+@keyframes slide {
+  100% {
+    transform: translateY(-300%);
+  }
+}
+
+
+.wrapper .content ol li span {
+  font-weight: 600;
+  background: linear-gradient(300deg, #3b82f6, #191970);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+
+  
+  border-right: .4rem solid var(--primary-color);
+  display: inline-block;
+  width: 0%;
+
+  animation: cursor .8s step-end infinite,
+            typing 2s steps(10) infinite alternate;
+}
+
+@keyframes cursor{
+  50% {border-color: transparent;}
+}
+@keyframes typing {
+   0%, 10% {  width: 0%;
+  }
+   70%, 100% {  width: 102%;
   }
 }
